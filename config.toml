@@ -1,3 +1,5 @@
+## Early version
+
 theme = "onedark"
 
 [editor.cursor-shape]
@@ -35,3 +37,42 @@ mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
 
+## Present Version
+
+theme = "darcula-solid"
+
+[editor]
+cursorline = true
+bufferline = "always"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name"]
+right = ["diagnostics", "position", "file-encoding", "file-type"]
+separator = "|"
+
+[editor.lsp]
+display-inlay-hints = true
+display-messages = true
+
+[editor.file-picker]
+hidden = false
+
+[keys.insert.j]
+k = "normal_mode"
+
+[keys.normal."+"]
+b = ":run-shell-command cargo build"
+B = ":run-shell-command cargo build --release"
+r = ":run-shell-command cargo run"
+R = ":run-shell-command cargo run --release"
+
+[keys.normal]
+C-s = ":wa"
+
+[keys.insert]
+C-s = ":wa"
